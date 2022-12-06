@@ -1,0 +1,22 @@
+name: experiment
+
+on:
+  pull_request:
+  push:
+    branches: [ '**' ]
+
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 
+
+    - uses: viash-io/viash-actions/setup@v1
+
+    # create cachehash key
+    - name: Get changed files
+      id: changed-files
+      uses: tj-actions/changed-files@v34

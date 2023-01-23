@@ -25,7 +25,7 @@ jobs:
         done
     
     - name: Build nextflow schemas
-      uses: viash-io/viash-actions/build_schemas@build_nextflow_schemas
+      uses: viash-io/viash-actions/build_nextflow_schemas@build_nextflow_schemas
       with:
         dir: workflows
         token: ${{ github.token }}

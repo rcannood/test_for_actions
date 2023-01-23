@@ -28,5 +28,5 @@ jobs:
       uses: viash-io/viash-actions/build_nextflow_schemas@build_nextflow_schemas
       with:
         dir: workflows
-        token: ${{ github.token }}
+        token: ${{ secrets.GTHB_PAT }}
       

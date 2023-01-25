@@ -29,7 +29,7 @@ jobs:
     - name: Build nextflow schemas
       uses: viash-io/viash-actions/build_nextflow_schemas@build_nextflow_schemas
       with:
-        input_dir: workflows
+        workflows: workflows
         token: ${{ secrets.GTHB_PAT }}
         tools_version: 'main_build'
       

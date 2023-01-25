@@ -29,7 +29,9 @@ jobs:
 
     - run: |
         # do something with the output yaml
-        echo "${{steps.ns_list.outputs.output}}"
+        cat | jq -c '[ .[] | { "name": .functionality.name, "namespace": .functionality.namespace, "config": .info.config } ]' << HERE
+        ${{steps.ns_list.outputs.output}}
+        HERE
 
     - name: Get changed files
       id: changed-files

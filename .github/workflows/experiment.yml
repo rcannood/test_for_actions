@@ -29,7 +29,7 @@ jobs:
 
     - run: |
         # do something with the output yaml
-        cat | jq -c '[ .[] | { "name": .functionality.name, "namespace": .functionality.namespace, "config": .info.config } ]' << HERE
+        cat | jq -c '[ .[] | { "name": .functionality.name, "namespace": .functionality.namespace, "config": .info.config } ]' << 'HERE'
         ${{steps.ns_list.outputs.output}}
         HERE
 

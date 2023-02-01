@@ -27,7 +27,7 @@ jobs:
         done
 
     - name: Build params files
-      uses: viash-io/viash-actions/generate_parameter_yaml@add_generate_parameter_yaml
+      uses: viash-io/viash-actions/build_nextflow_params@add_generate_parameter_yaml
       with:
         workflows: workflows
         token: ${{ secrets.GTHB_PAT }}

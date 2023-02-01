@@ -36,7 +36,7 @@ jobs:
         path: openpipelines
         ref: "main_build"
 
-    - uses: viash-io/viash-actions/generate_documentation_qmd@generate_documentation_qmd
+    - uses: viash-io/viash-actions/generate-documentation-qmd@main
       with:
         input_dir: openpipelines
         output_dir: openpipelines-bio/website/components
